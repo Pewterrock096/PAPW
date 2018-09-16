@@ -1,0 +1,38 @@
+#formLogin{padding: 15px; min-width:300px;}
+
+@media (min-width: 1200px) {
+    .navbar .form-control.mr-sm-2{
+        width: 970px;
+    }
+}
+@media (min-height: 900px) {
+    .sidenav{
+        height: 900px;
+    }
+}
+
+.sidenav {
+  padding-top: 20px;
+  background-color: #f1f1f1;
+  
+}
+
+
+.container-fluid .container{
+    padding-top: 20px;
+    background-color: #flflfl;
+}
+
+.container-fluid .pagination{
+    padding-top: 30px;
+    
+}
+
+a{
+    font-style: inherit;
+    color: inherit;
+    background-color: transparent;
+    font-size: inherit;
+    text-decoration: none;
+ 
+}

@@ -1,0 +1,54 @@
+#formLogin{padding: 15px; min-width:300px;}
+
+@media (min-width: 1200px) {
+    .navbar .form-control.mr-sm-2{
+        width: 970px;
+    }
+}
+@media (min-height: 900px) {
+    .sidenav{
+        height: 900px;
+    }
+}
+
+.sidenav {
+  padding-top: 20px;
+  background-color: #f1f1f1;
+  
+}
+
+
+.container-fluid .container{
+    padding-top: 20px;
+    background-color: #flflfl;
+}
+
+
+a{
+    font-style: inherit;
+    color: inherit;
+    background-color: transparent;
+    font-size: inherit;
+    text-decoration: none;
+ 
+}
+
+.container-fluid .row.content .col-sm-10 .container .banner{
+    width: 1200px;
+    height:400px;
+}
+
+.container-fluid .row.content .col-sm-10 .container .banner img{
+    width: 100%;
+    height: auto;
+}
+
+.container-fluid .row.content .col-sm-10 .container .card .card-body .row .col-4{
+    width: 300px;
+    height: 300px;
+}
+
+.container-fluid .row.content .col-sm-10 .container .card .card-body .row .col-4 img{
+    width: 90%;
+    height: auto;
+}
