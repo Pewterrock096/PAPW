@@ -117,25 +117,7 @@
                 <div class="col-sm-2 sidenav">
                     <div id="accordion">
                         
-                         <div class="card">
-                            <div class="card-header">
-                              <a class="card-link" data-toggle="collapse" href="#Categorias">
-                                Categorias
-                              </a>
-                            </div>
-                            <div id="Categorias" class="collapse show" data-parent="#accordion">
-                              <div class="card-body">
-                                   <p><a href="#">Tecnología</a></p>
-                                  <p><a href="#">Vehiculos</a></p>
-                                  <p><a href="#">Hogar</a></p>
-                                  <p><a href="#">Juguetes</a></p>
-                                  <p><a href="#">Deportes</a></p>
-                                  <p><a href="#">Joyeria</a></p>
-                                  <p><a href="#">Belleza y Cuidado Personal</a></p>
-                              </div>
-                            </div>
-                          </div>
-                        
+                            <%if (session.getAttribute("usuarioUsuario") != null){%>
                         <div class="card">
                             <div class="card-header">
                               <a class="card-link" data-toggle="collapse" href="#Opciones">
@@ -144,12 +126,13 @@
                             </div>
                             <div id="Opciones" class="collapse" data-parent="#accordion">
                               <div class="card-body">
-                                   <p><a href="perfil.html">Perfil</a></p>
-                                  <p><a href="vender.html">Publica un artículo</a></p>
-                                  <p><a href="historial.html">Historial de Compras</a></p>
+                                  <p><a href="${pageContext.request.contextPath}/jsp/perfil.jsp?usuario=${sessionScope.idUsuario}">Perfil</a></p>
+                                  <p><a href="${pageContext.request.contextPath}/jsp/vender.jsp">Publica un artículo</a></p>
+                                  <p><a href="${pageContext.request.contextPath}/jsp/historial.jsp?usuario=${sessionScope.idUsuario}">Historial de Compras</a></p>
                               </div>
                             </div>
                           </div>
+        <%}%>
         
                     </div>
                 </div>

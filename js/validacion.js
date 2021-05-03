@@ -5,38 +5,41 @@
  */
 
  function validalogin(f){
-     if (f.usuariologin =="" || f.contraseñalogin==""){
+     var textBox = document.getElementById("usuariologin");
+var textLength = textBox.value.length;
+
+var textBox2 = document.getElementById("contralogin");
+var textLength2 = textBox.value.length;
+     if (f.usuariologin.value == "" || f.contralogin.value == ""){
          alert('Debe llenar todos los campos');
-     }
-     else{
-     if(f.usuariologin.value < 6){
-             alert('El usuario debe tener minimo 6 carácteres');
-         }
-         if (f.contraseñalogin.value < 8){
-             alert('La contraseña debe contener minimo 8 carácteres');
-         }
-         else{
-             if(requerimientos(f.contraseñalogin.value) === false){
-                 alert('La contraseña debe tener minimo 1 mayuscula, 1 minuscula y 1 numero');
-             }
-         }
+         return false;
      }
  }
  
  function validaregistro(p){
-     if (p.nombre.value == "" || p.apellido.value == "" || p.correo.value == "" || p.usuario.value == "" || p.contraseña.value == "" || p.imagenportada.value == "" || p.imagenusuario.value == ""){
+    var textBox = document.getElementById("usuario");
+var textLength = textBox.value.length;
+
+var textBox2 = document.getElementById("contra");
+var textLength2 = textBox.value.length;
+     if (p.nombre.value == "" || p.apellido.value == "" || p.correo.value == "" || p.usuario.value == "" || p.contra.value == ""){
      alert('Debe llenar todos los campos');
+     
+     return false;
      }
      else{
-         if (p.usuario.value < 6){
-             alert('El usuario debe contener minimo 6 carácteres');
+         if (textLength < 6){
+             alert('El usuario debe contener minimo 6 carácteres');         
+     return false;
          }
-         if (p.contraseña.value < 8){
-             alert('La contraseña debe tener minimo 8 carácteres');
+         if (textLength2 < 8){
+             alert('La contraseña debe tener minimo 8 carácteres');           
+     return false;
          }
          else{
-             if(requerimientos(p.contraseña.value) === false){
-                 alert('La contraseña debe tener minimo 1 mayuscula, 1 minuscula y 1 numero');
+             if(requerimientos(p.contra.value) === false){
+                 alert('La contraseña debe tener minimo 1 mayuscula, 1 minuscula y 1 numero');        
+     return false;
              }
          }
      }
@@ -65,4 +68,26 @@
         }
     }
     return boleano;
+ }
+ 
+ function validaproducto(a){
+     if(a.nombrearticulo.value == "" || a.descripcionarticulo.value == "" || a.precioarticulo.value == "" || a.unidadesarticulo.value == "" || a.fotoarticulo1.value == "" || a.fotoarticulo2.value == "" || a.fotoarticulo3.value == "" || a.videoarticulo.value == "" ){
+          alert('Debe llenar todos los campos');     
+     return false;
+     }
+ }
+ 
+ function validacomentario(b){
+     var textBox = document.getElementById("Comentar");
+     if(textBox.value==""){
+           alert('Debe escribir un comentario primero');     
+     return false;
+     }
+ }
+ 
+ function validaimagen(c){
+     if(c.fotoperfil.value == "" || c.fotoportada.value == ""){
+         alert('Debe elegir 2 imagenes'); 
+         return false;
+     }
  }
